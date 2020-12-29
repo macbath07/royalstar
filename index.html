@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </header>
+  <body>
+<h1 id="title"><u><font size="8">Royal Stars football tournament</h1></font></u></font>
+<label id="description"><font size="6">5's football tournament powered by <strong>Royal Stars veluthur</strong></font>
+<h2><u><font size="8">Team Registration Form</font></u> </h2>
+<main id="main">
+<form id="Submit-form"  action="">
+  <div class="form-row">
+    <div class="left-column">
+      <div class="labels">
+      <label  for="name-label">Name of the team:</label>
+      </div>
+    </div>
+    <div class="right-column">
+      <label for="name-label">
+        <input id="name-label"  class="input-field" type="text" name="team name" placeholder="Enter your team name" required="">
+      </label>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="left-column">
+      <div class="labels">
+      <label  for="session-label">Name Owner:</label>
+      </div>
+    </div>
+    <div class="right-column">
+      <label for="session-label">
+        <input id="session-label"  class="input-field" type="text" name="owner" placeholder="Team Owner" required="">
+      </label>
+    </div>
+  </div>
+   <div class="form-row">
+    <div class="left-column">
+      <div class="labels">
+      <label  for="session-label">Name of Manager:</label>
+      </div>
+    </div>
+    <div class="right-column">
+      <label for="session-label">
+        <input id="session-label"  class="input-field" type="text" name="Manager" placeholder="Manager" required="">
+      </label>
+    </div>
+  </div>
+
+  
+   
+  </div>
+  <div class="form-row">
+    <div class="left-column">
+      <div class="labels">
+      <label  for="phone-label">Phone Number:</label>
+      </div>
+    </div>
+    <div class="right-column">
+      <label for="phone-label">
+        <input id="phone-label"  class="input-field" type="number" name="number" placeholder="Enter your phone number" required="">
+      </label>
+    </div>
+  </div>
+<div class="form-row">
+    <div class="left-column">
+      <div class="labels">
+      <label  for="phone-label">whatsapp Number:</label>
+      </div>
+    </div>
+    <div class="right-column">
+      <label for="phone-label">
+        <input id="phone-label"  class="input-field" type="number" name="whatsapp number" placeholder="Enter your wp number" required="">
+      </label>
+    </div>
+  </div>
+
+   <div class="form-row">
+    <div class="left-column">
+      <div class="labels">
+      <label  for="email-label"> Email:</label>
+      </div>
+    </div>
+    <div class="right-column">
+      <label for="email-label">
+        <input id="email-label"  class="input-field" type="email" name="mail" placeholder="Enter your email">
+      </label>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="left-column">
+      <label for="age-label">Place:</label>
+    </div>
+    <div class="right-column">
+      <label for="age-label">
+        <input id="age-label" class="input-field" type="text" placeholder="Enter your location">
+      </label>
+    </div>
+  </div>
+  
+ 
+
+  <div class="form-row">
+   <div class="left-column">
+     <label for="other-position">position of registering person:</label>
+  </div>
+  <div class="right-column">
+   <select id="dropdown" name="otherpos" >
+     <option disabled="" value="" selected="">Select an option</option>
+     <option value="ply">Owner</option>
+     <option value="mana">Manager</option>
+     <option value="men">Mentor</option>
+     <option value="Icply">Icon Player</option>
+     <option value="Icply">Player</option>
+    </select>
+  </div>
+  </div>
+  <h5><font size="3">
+  	This tournament will conduct under covid protocol.<br> Every member that comes with team must wear the mask is there any voilations are noted full responsibility will be in the hands of team owner<br> A whatsapp group will be created to recive instructions for the Tournament<font color="red"> (only for team owners)</font><br><u><font size="4" color="red">Auction will be conducted for the players.
+  </font>
+  	
+  </u>
+  </h5>
+  
+  <div class="form-row">
+    <div class="left-column">
+      <label for="comment">Any <strong>comments/suggestions</strong> regarding this tournament:</label> 
+    </div>
+    <div class="right-column">
+     <textarea id="comment" class="input-field" style="height:90px;resize:vertical;" name="message" placeholder="Enter your text..."></textarea>
+    </div>
+  </div>
+  <div class="form-row">
+  <button id="submit">Submit</button>
+    </div>
+</form>
+<script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbx2pbAD3GcySxrLrEI5g-DOLd_zdI049amwmRFs5w/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+  </body>
+  </html>
+    
+ 
+  
+
+
